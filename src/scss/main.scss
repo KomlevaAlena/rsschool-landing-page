@@ -1,0 +1,28 @@
+/* Base */
+@use './base/reset' as *;
+@use './base/vars' as *;
+@use './base/mixins' as *;
+@use './base/fontsAutoGen' as *;
+@use './base/base' as *;
+@use './base/utils' as *;
+@use './base/containers' as *;
+@use './base/sticky-footer' as *;
+@use './base/fonts' as *;
+@use './base/global' as *;
+@use './base/themes' as *;
+
+/* Blocks */
+// @use './blocks/header';
+// @use './blocks/mob-menu';
+// @use './blocks/main-content';
+// @use './blocks/hero';
+// @use './blocks/about';
+// @use './blocks/slider';
+// @use './blocks/gift-card';
+// @use './blocks/gift-main';
+// @use './blocks/shopwindow';
+// @use './blocks/cta';
+// @use './blocks/counter';
+// @use './blocks/footer';
+// @use './blocks/modal-card';
+// @use './blocks/to-top';
