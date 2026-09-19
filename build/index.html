@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" />
-        <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
     </head>
     <body>
         <header class="header">
@@ -20,9 +20,10 @@
             <nav class="header__nav nav">
                 <nav class="main-nav">
                 <a class="main-nav__logo link" href="index.html">
+                    <h1 class="visually-hidden title">Resource coffee house</h1>
                     <picture class="main-nav__picture">
                         <source media="(max-width: 1025px)" srcset="./img/logo-coffee.png 1x, img/logo-coffee.png 2x">
-                        <img class="main-nav__image" src="./img/logo-coffee.png" srcset="./img/logo-coffee.png"  alt="Heart"  width="100" height="60">
+                        <img class="main-nav__image" src="./img/logo-coffee.png" srcset="./img/logo-coffee.png"  alt="Resource coffee house"  width="100" height="60">
                     </picture>
                     <span class="visually-hidden">Professional photographer</span>
                 </a>
@@ -49,10 +50,14 @@
             </a>
             <div>
                 <button class="mobile-nav-btn theme-btn light-theme-btn">
-
+                    <svg class="burger-icon icon">
+                        <use href="./img/svgsprite/sprite.symbol.svg#sun"></use>
+                    </svg>
                 </button>
                 <button class="mobile-nav-btn theme-btn dark-theme-btn">
-
+                    <svg class="burger-icon icon">
+                        <use href="./img/svgsprite/sprite.symbol.svg#moon"></use>
+                    </svg>
                 </button>
             </div>
             <button class="mobile-nav-btn">
@@ -70,6 +75,31 @@
         </div>
 </header>
         <main class="main main-content">
+            <section class="hero section">
+    <div class="hero__content">
+        <picture class="hero__picture">
+            <source media="(max-width: 1025px)" srcset="./img/hero.jpg 1x, img/hero.jpg 2x">
+            <img class="hero__image" src="./img/hero.jpg" srcset="./img/hero.jpg"  alt="coffee cup"  width="1360" height="644">
+        </picture>
+        <ul class="hero__list list">
+            <li class="hero__item">
+                <p class="hero__description">
+                    Enjoy premium coffee at&#160;our charming cafe
+                </p>
+            </li>
+            <li class="hero__item">
+                <p class="hero__text">
+                    With its inviting atmosphere and delicious coffee options, the Coffee House Resource is&#160;a&#160;popular destination for coffee lovers and those seeking a&#160;warm and inviting space to&#160;enjoy their favorite beverage.
+                </p>
+            </li>
+            <li class="hero__item">
+                <a class="hero__button button" type="button" href="#">
+                    Menu
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
 
         </main>
 
