@@ -1,5 +1,6 @@
 @use 'vars' as*;
 @use 'mixins' as*;
+@use 'themes' as*;
 
 .section {
     width: 100%;
@@ -36,8 +37,8 @@
 }
 
 .button {
-    color: $static-white;
-    background-color: $dark;
+    color: var(--text-primary);
+    background-color: var(--text-inverse);
     border-radius: 20px;
     padding: 20px 32px;
     text-decoration: none;
@@ -53,8 +54,8 @@
     &:hover,
     &:focus,
     &:focus-visible {
-        color: $dark;
-        background-color: $static-white;
+        color: var(--text-inverse);
+        background-color: var(--text-primary);
         border: none;
         outline: none;
     }

@@ -1,13 +1,13 @@
 # rsschool-landing-page
 rsschool-landing-page
 
-# Deploy:
+## Deploy:
 https://komlevaalena.github.io/rsschool-landing-page/
 
-# layout:
+## layout:
 https://www.figma.com/design/yuc5s9NCc4jENkk5LdFfvX/Coffee-House-2026Q3?node-id=0-1
 
-# Gulp сборка
+## Gulp сборка
 
 - HTML,
 - SCSS,
