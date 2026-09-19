@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
-const server = require('gulp-server-livereload');
+const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const fs = require('fs');
 const sourceMaps = require('gulp-sourcemaps');
@@ -62,7 +62,8 @@ gulp.task('html:dev', function () {
 				],
 			})
 		)
-		.pipe(gulp.dest('./build/'));
+		.pipe(gulp.dest('./build/'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('sass:dev', function () {
@@ -80,7 +81,8 @@ gulp.task('sass:dev', function () {
 			)
 		)
 		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('./build/css/'));
+		.pipe(gulp.dest('./build/css/'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('images:dev', function () {
@@ -165,16 +167,20 @@ gulp.task('js:dev', function () {
 		.pipe(plumber(plumberNotify('JS')))
 		// .pipe(babel())
 		.pipe(webpack(require('./../webpack.config.js')))
-		.pipe(gulp.dest('./build/js/'));
+		.pipe(gulp.dest('./build/js/'))
+		.pipe(browserSync.stream());
 });
 
-const serverOptions = {
-	livereload: true,
-	open: true,
-};
-
-gulp.task('server:dev', function () {
-	return gulp.src('./build/').pipe(server(serverOptions));
+gulp.task('server:dev', function (done) {
+	browserSync.init({
+		server: {
+			baseDir: './build/',
+		},
+		port: 8000,
+		open: true,
+		notify: false,
+	});
+	done();
 });
 
 gulp.task('watch:dev', function () {
