@@ -1,0 +1,52 @@
+@use './base/mixins' as *;
+@use './base/vars' as *;
+@use './base/themes' as *;
+
+.hero__content {
+    @include flex;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 100px;
+    // width: 1360px;
+    min-height: 644px;
+    max-width: 1360px;
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero__list {
+    @include flex;
+    gap: 40px;
+}
+
+.hero__title {
+    display: block;
+    max-width: 531px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 105%;
+    color: var(--text-inverse);
+
+    .accent {
+        color: var(--text-accent);
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 105%;
+    }
+}
+
+.hero__text {
+    display: block;
+    max-width: 531px;
+    color: var(--text-inverse);
+}
+
+.hero__button {
+    display: block;
+    max-width: 200px;
+    padding: 20px;
+    border-radius: 100px;
+}
