@@ -2,7 +2,7 @@
 /* Контейнеры */
 .container {
 	margin: 0 auto;
-	width: 1440px;
+	min-width: 1440px;
 
 	// @include desc-small {
 	// 	width: 984px;

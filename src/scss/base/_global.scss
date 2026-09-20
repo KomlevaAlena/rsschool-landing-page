@@ -11,28 +11,30 @@
 }
 
 .link {
-    color: $dark;
+    color: var(--text-primary);
     text-decoration: none;
-    text-transform: uppercase;
     font-family: $font-family;
-    font-size: 22px;
-    font-weight: 100;
-    line-height: 22px;
-    letter-spacing: 0.09em;
-    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    // letter-spacing: 0.09em;
+    text-align: center;
+    border-bottom: 1px solid transparent;
 
     &:hover,
     &:focus,
     &:focus-visible {
-        color: $primary;
+        color: var(--text-primary);
         border: none;
         outline: none;
+        border-bottom: 1px solid var(--text-primary);
     }
 
     &:active {
-        color: $primary-10;
+        color: var(--text-primary);
         border: none;
         outline: none;
+        border-bottom: 1px solid var(--text-primary);
     }
 }
 
@@ -137,6 +139,10 @@ h3.title {
     //     font-size: 18px;
     //     letter-spacing: 0.28em;
     // }
+}
+
+.text-accent {
+    color: var(--text-accent);
 }
 
 .description {

@@ -1,0 +1,136 @@
+@use './base/mixins' as *;
+@use './base/vars' as *;
+@use './base/themes' as *;
+
+.header {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.header__container, .header__nav {
+    @include flex(row, space-between);
+}
+
+.header__nav {
+    max-width: $cont-desk;
+    @include flex (row, space-between);
+    padding: 20px 0;
+    margin: 0 auto;
+
+    // @include tablet {
+    //     position: relative;
+    //     padding: 12px 8px;
+    // }
+}
+
+.main-nav {
+    @include flex (row, space-between);
+}
+
+.main-nav__list {
+    @include flex (row, center);
+    align-items: center;
+    min-width: 1032px;
+    gap: 40px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.main-nav__logo {
+ display: block;
+ max-height: 100px;
+ align-self: center;
+ transition: transform 0.3s ease;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        opacity: 0.9;
+        transform: scale(0.9);
+    }
+}
+
+// .main-nav__link{
+
+// }
+.menu-link {
+    @include flex (row, space-between);
+    align-items: center;
+    margin: auto 24px auto 24px;
+    gap: 8px;
+    border: 1px solid transparent;
+    .menu__tex {
+    display: block;
+    }
+    svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: transparent;
+ }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        border: 1px solid transparent;
+        svg {
+        stroke: var(--text-primary);
+        }
+    }
+}
+
+.theme-btn__wrapper {
+    @include flex (row, space-between);
+    margin: auto 24px auto 24px;
+    min-width: 88px;
+    max-height: 44px;
+    border: 1px solid var(--text-primary);
+    border-radius: 100px;
+}
+
+.theme-btn {
+    margin: 3px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+ svg {
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 22px;
+    stroke: none;
+    fill: var(--text-primary);
+ }
+}
+
+.light-theme-btn {
+    background-color: var(--text-accent);
+    
+    svg {
+        fill: var(--text-inverse);
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: transparent;
+        svg {
+           fill: var(--text-primary); 
+        }
+    }
+}
+
+.dark-theme-btn {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: var(--text-accent);
+        svg {
+           fill: var(--text-inverse); 
+        }
+    }
+}
+
