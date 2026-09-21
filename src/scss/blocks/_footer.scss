@@ -1,0 +1,100 @@
+@use './base/mixins' as *;
+@use './base/vars' as *;
+@use './base/themes' as *;
+
+.footer {
+    margin: 0 auto;
+}
+.footer__wrapper {
+    @include flex(row, center);
+    align-items: center;
+    background: var(--background-container);
+    border-radius: 40px;
+    max-width: 1360px;
+    margin: 0 auto;
+    gap: 100px;
+    padding: 100px;
+}
+
+h2.footer__title {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 105%;
+    color: var(--text-inverse);
+    max-width: 530px;
+    text-align: start;
+}
+
+.footer__wrapper {
+    @include flex(column, center);
+}
+
+.footer__container {
+    @include flex(row, space-between);
+    gap: 100px;
+}
+.footer-list__wrapper {
+    align-self: self-start;
+}
+.footer__social-list {
+    @include flex(row, start);
+    gap: 12px;
+}
+
+.footer__social-link {
+    margin: auto auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--text-inverse);
+    padding: 12px 12px 12px 12px;
+
+    svg {
+        margin: auto auto;
+        width: 24px;
+        height: 24px;
+        stroke: var(--text-inverse);
+        fill: transparent;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        border: 1px solid transparent;
+        background-color: var(--text-inverse);
+        svg {
+            stroke: var(--text-primary);
+        }
+    }
+}
+.footer-list__container {
+    @include flex(column, start);
+    gap: 40px;
+}
+.footer__list {
+    @include flex(column, start);
+    gap: 16px;
+    max-width: 530px;
+}
+
+.footer__title {
+    max-width: max-content;
+    font-size: 24px;
+    line-height: 125%;
+    text-align: start;
+    margin: 0;
+    color: var(--text-inverse);
+}
+
+.footer__link {
+    @include flex(row, start);
+    gap: 8px;
+    align-items: center;
+    color: var(--text-inverse);
+    svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--text-inverse);
+        fill: transparent;
+    }
+}
