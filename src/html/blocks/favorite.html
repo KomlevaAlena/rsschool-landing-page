@@ -1,13 +1,15 @@
-<section class="favorite section" id="favorite">
-    <h2 class="title">Choose your favorite coffee</h2>
+<section class="favorite section container" id="favorite">
+    <h2 class="favorite__title title">
+        Choose your&nbsp<sapn class="text-accent">favorite</sapn> coffee
+    </h2>
     <div class="favorite__content">
-        <button class="favorite__btn slider-btn btn" type="button">
+        <button class="favorite__btn slider-btn before-btn btn" type="button">
             <span class="visually-hidden">before</span>
             <svg class="burger-icon icon">
                 <use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
             </svg>
         </button>
-        <button class="favorite__btn slider-btn btn" type="button">
+        <button class="favorite__btn slider-btn next-btn btn" type="button">
             <span class="visually-hidden">next</span>
             <svg class="burger-icon icon">
                 <use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
@@ -16,13 +18,31 @@
         <ul class="favorite__list list">
             <li class="favorite__item">
                 <div class="favorite__card">
-                    <picture class="main-nav__picture">
-                        <source media="(max-width: 1025px)" srcset="img/coffee-slider-1.png 1x, img/coffee-slider-1.png 2x">
-                        <img class="main-nav__image" src="img/coffee-slider-1.png" srcset="img/coffee-slider-1.png"  alt="S’mores Frappuccino"  width="480" height="480">
+                    <picture class="favorite__picture">
+                        <source
+                            media="(max-width: 1025px)"
+                            srcset="
+                                img/coffee-slider-1.png 1x,
+                                img/coffee-slider-1.png 2x
+                            "
+                        />
+                        <img
+                            class="favorite__image"
+                            src="img/coffee-slider-1.png"
+                            srcset="img/coffee-slider-1.png"
+                            alt="S’mores Frappuccino"
+                            width="480"
+                            height="480"
+                        />
                     </picture>
-                    <h3>S’mores Frappuccino</h3>
-                    <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                    <div>
+                    <h3 class="favorite__title-card title">
+                        S’mores Frappuccino
+                    </h3>
+                    <p class="favorite__text text">
+                        This new drink takes an espresso and mixes it with brown
+                        sugar and cinnamon before being topped with oat milk.
+                    </p>
+                    <div class="favorite__price">
                         <span>$</span>
                         <span>5.50</span>
                     </div>
@@ -30,13 +50,32 @@
             </li>
             <li class="favorite__item">
                 <div class="favorite__card">
-                    <picture class="main-nav__picture">
-                        <source media="(max-width: 1025px)" srcset="img/coffee-slider-2.png 1x, img/coffee-slider-2.png 2x">
-                        <img class="main-nav__image" src="img/coffee-slider-2.png" srcset="img/coffee-slider-2.png"  alt="Caramel Macchiato"  width="480" height="480">
+                    <picture class="favorite__picture">
+                        <source
+                            media="(max-width: 1025px)"
+                            srcset="
+                                img/coffee-slider-2.png 1x,
+                                img/coffee-slider-2.png 2x
+                            "
+                        />
+                        <img
+                            class="favorite__image"
+                            src="img/coffee-slider-2.png"
+                            srcset="img/coffee-slider-2.png"
+                            alt="Caramel Macchiato"
+                            width="480"
+                            height="480"
+                        />
                     </picture>
-                    <h3>Caramel Macchiato</h3>
-                    <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
-                    <div>
+                    <h3 class="favorite__title-card title">
+                        Caramel Macchiato
+                    </h3>
+                    <p class="favorite__text text">
+                        Fragrant and unique classic espresso with rich
+                        caramel-peanut syrup, with cream under whipped thick
+                        foam.
+                    </p>
+                    <div class="favorite__price">
                         <span>$</span>
                         <span>5.00</span>
                     </div>
@@ -44,23 +83,51 @@
             </li>
             <li class="favorite__item">
                 <div class="favorite__card">
-                    <picture class="main-nav__picture">
-                        <source media="(max-width: 1025px)" srcset="img/coffee-slider-3.png 1x, img/coffee-slider-3.png 2x">
-                        <img class="main-nav__image" src="img/coffee-slider-3.png" srcset="img/coffee-slider-3.png"  alt="Ice coffee"  width="480" height="480">
+                    <picture class="favorite__picture">
+                        <source
+                            media="(max-width: 1025px)"
+                            srcset="
+                                img/coffee-slider-3.png 1x,
+                                img/coffee-slider-3.png 2x
+                            "
+                        />
+                        <img
+                            class="favorite__image"
+                            src="img/coffee-slider-3.png"
+                            srcset="img/coffee-slider-3.png"
+                            alt="Ice coffee"
+                            width="480"
+                            height="480"
+                        />
                     </picture>
-                    <h3>Ice coffee</h3>
-                    <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
-                    <div>
+                    <h3 class="favorite__title-card title">Ice coffee</h3>
+                    <p class="favorite__text text">
+                        A popular summer drink that tones and invigorates.
+                        Prepared from coffee, milk and ice.
+                    </p>
+                    <div class="favorite__price">
                         <span>$</span>
                         <span>4.50</span>
                     </div>
                 </div>
             </li>
         </ul>
-        <ul class="favorite__list list pagination">
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
+        <ul class="favorite__list-pagination list pagination">
+            <li class="pagination__item">
+                <button class="pagination__btn btn active" type="button">
+                    <span class="visually-hidden">1</span>
+                </button>
+            </li>
+            <li class="pagination__item">
+                <button class="pagination__btn btn" type="button">
+                    <span class="visually-hidden">2</span>
+                </button>
+            </li>
+            <li class="pagination__item">
+                <button class="pagination__btn btn" type="button">
+                    <span class="visually-hidden">3</span>
+                </button>
+            </li>
         </ul>
     </div>
 </section>

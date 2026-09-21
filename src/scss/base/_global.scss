@@ -1,8 +1,15 @@
-@use 'vars' as*;
-@use 'mixins' as*;
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'themes' as *;
 
-.section {
-    width: 100%;
+// .section {
+//     width: 100%;
+// }
+
+.main-content {
+    @include flex;
+    margin: 0 auto;
+    gap: 100px;
 }
 
 .list {
@@ -10,42 +17,44 @@
 }
 
 .link {
-    color: $dark;
+    color: var(--text-primary);
     text-decoration: none;
-    text-transform: uppercase;
     font-family: $font-family;
-    font-size: 22px;
-    font-weight: 100;
-    line-height: 22px;
-    letter-spacing: 0.09em;
-    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    // letter-spacing: 0.09em;
+    text-align: center;
+    border-bottom: 1px solid transparent;
 
     &:hover,
     &:focus,
     &:focus-visible {
-        color: $primary;
+        color: var(--text-primary);
         border: none;
         outline: none;
+        border-bottom: 1px solid var(--text-primary);
     }
 
     &:active {
-        color: $primary-10;
+        color: var(--text-primary);
         border: none;
         outline: none;
+        border-bottom: 1px solid var(--text-primary);
     }
 }
 
 .button {
-    color: $static-white;
-    background-color: $dark;
+    color: var(--text-primary);
+    background-color: var(--text-inverse);
     border-radius: 20px;
     padding: 20px 32px;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-family: $font-family;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 130%;
+    line-height: 150%;
     // letter-spacing: 0.05em;
     text-align: center;
     display: block;
@@ -53,8 +62,8 @@
     &:hover,
     &:focus,
     &:focus-visible {
-        color: $dark;
-        background-color: $static-white;
+        color: var(--text-inverse);
+        background-color: var(--text-primary);
         border: none;
         outline: none;
     }
@@ -65,13 +74,6 @@
         border: none;
         outline: none;
     }
-}
-
-.title {
-    color: $static-white;
-    font-family: $second-family;
-    // text-transform: uppercase;
-    width: max-content;
 }
 
 h1.title {
@@ -94,13 +96,20 @@ h1.title {
     }
 }
 
-h2.title {
-    font-family: $second-family;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0.05em;
-    color: $static-white;
+h2 {
+    // font-family: $second-family;
+    // font-weight: 400;
+    // font-size: 24px;
+    // line-height: 100%;
+    // letter-spacing: 0.05em;
+    // color: $static-white;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 125%;
+    text-align: center;
+    color: var(--text-primary);
 
     // @include tablet {
     //     font-size: 40px;
@@ -115,17 +124,17 @@ h2.title {
     // }
 }
 
-h2.title.title-light {
-    color: $static-white;
-}
+// h2.title.title-light {
+//     color: $static-white;
+// }
 
-h3.title {
+h3 {
     font-family: $font-family;
+    color: var(--text-primary);
     font-weight: 600;
-    font-size: 80px;
-    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 125%;
     text-align: center;
-    color: $static-white;
 
     // @include tablet {
     //     font-size: 22px;
@@ -138,13 +147,27 @@ h3.title {
     // }
 }
 
+.title {
+    color: var(--text-primary);
+    font-family: $font-family;
+    // text-transform: uppercase;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.text-accent {
+    font-family: var(--font-family);
+    font-style: italic;
+    color: var(--text-accent);
+}
+
 .description {
     font-family: $font-family;
     font-weight: 600;
     font-size: 24px;
-    line-height: 152%;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    line-height: 125%;
+    // letter-spacing: 0.16em;
+    // text-transform: uppercase;
     color: $dark;
 }
 
@@ -163,14 +186,15 @@ legend {
     color: $dark;
 
     @include mobile {
-      font-size: 16px;
-      text-align: center;
+        font-size: 16px;
+        text-align: center;
     }
 }
 
-.acent {
+.accent {
     font-family: $second-family;
     font-weight: 400;
+    font-style: italic;
     font-size: 24px;
     line-height: 100%;
     letter-spacing: 0.05em;

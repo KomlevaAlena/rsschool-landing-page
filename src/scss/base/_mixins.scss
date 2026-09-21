@@ -1,13 +1,13 @@
 @mixin mediaBg() {
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	    @content;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @content;
     }
 }
 
-@mixin desctop () {
+@mixin desctop() {
     @media (max-width: 1920px) {
-		@content;
-	}
+        @content;
+    }
 }
 
 // @mixin desc-small () {
@@ -16,16 +16,16 @@
 // 	}
 // }
 
-@mixin tablet () {
+@mixin tablet() {
     @media (max-width: 1439px) {
-		@content;
-	}
+        @content;
+    }
 }
 
-@mixin mobile () {
+@mixin mobile() {
     @media (max-width: 767px) {
-		@content;
-	}
+        @content;
+    }
 }
 
 @mixin flex($direction: column, $justify: flex-start) {
@@ -36,26 +36,26 @@
 }
 
 @mixin grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 
-	@include tablet {
+    @include tablet {
         grid-template-columns: 1fr 1fr;
-		gap: 12px;
+        gap: 12px;
     }
 
-	@include mobile {
+    @include mobile {
         grid-template-columns: 1fr;
     }
 }
 
 @mixin menu-btn {
-	font-family: $font-family;
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 130%;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-	color: $dark;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark;
 }

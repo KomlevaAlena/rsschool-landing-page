@@ -32,6 +32,7 @@
 		"imagemin-webp": "^6.0.1",
 		"merge-stream": "^2.0.0",
 		"npm": "^9.7.2",
+		"prettier": "^3.9.8",
 		"sass": "^1.63.4",
 		"style-loader": "^3.3.3",
 		"webpack-stream": "^7.0.0"
@@ -48,5 +49,8 @@
 		"avif-webp-checker": "^1.0.0",
 		"portfinder": "^1.0.37",
 		"swiper": "^11.2.10"
+	},
+	"scripts": {
+		"format": "prettier --write \"src/**/*.{html,scss,js}\""
 	}
 }

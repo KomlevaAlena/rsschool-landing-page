@@ -93,21 +93,40 @@ gulp.task('html:docs', function () {
 		.pipe(gulp.dest('./docs/'));
 });
 
+// gulp.task('sass:docs', function () {
+// 	return gulp
+// 		.src('./src/scss/*.scss')
+// 		.pipe(changed('./docs/css/'))
+// 		.pipe(plumber(plumberNotify('SCSS')))
+// 		.pipe(sourceMaps.init())
+// 		.pipe(autoprefixer())
+// 		.pipe(sassGlob())
+// 		.pipe(groupMedia())
+// 		.pipe(sass())
+// 		// .pipe(
+// 		// 	webImagesCSS({
+// 		// 		mode: 'webp',
+// 		// 	})
+// 		// )
+// 		.pipe(
+// 			replace(
+// 				/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+// 				'$1$2$3$4$6$1'
+// 			)
+// 		)
+// 		.pipe(csso())
+// 		.pipe(sourceMaps.write())
+// 		.pipe(gulp.dest('./docs/css/'));
+// });
+
 gulp.task('sass:docs', function () {
 	return gulp
 		.src('./src/scss/*.scss')
-		.pipe(changed('./docs/css/'))
 		.pipe(plumber(plumberNotify('SCSS')))
 		.pipe(sourceMaps.init())
-		.pipe(autoprefixer())
 		.pipe(sassGlob())
-		.pipe(groupMedia())
-		.pipe(sass())
-		// .pipe(
-		// 	webImagesCSS({
-		// 		mode: 'webp',
-		// 	})
-		// )
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer())
 		.pipe(
 			replace(
 				/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
@@ -115,7 +134,7 @@ gulp.task('sass:docs', function () {
 			)
 		)
 		.pipe(csso())
-		.pipe(sourceMaps.write())
+		.pipe(sourceMaps.write('.'))
 		.pipe(gulp.dest('./docs/css/'));
 });
 
@@ -217,3 +236,19 @@ gulp.task('server:docs', function() {
     notify: false
   });
 });
+
+gulp.task(
+	'docs',
+	gulp.series(
+		'clean:docs',
+		gulp.parallel(
+			'html:docs',
+			'sass:docs',
+			'images:docs',
+			'svgSymbol:docs',
+			'files:docs',
+			'js:docs'
+		),
+		'server:docs'
+	)
+);
