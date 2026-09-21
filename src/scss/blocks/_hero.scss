@@ -24,6 +24,8 @@
 .hero__title {
     display: block;
     max-width: 531px;
+    margin: 0;
+    text-align: start;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 72px;
