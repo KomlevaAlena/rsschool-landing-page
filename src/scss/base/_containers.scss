@@ -1,22 +1,21 @@
-@use 'mixins' as*;
+@use 'mixins' as *;
 /* Контейнеры */
 .container {
-	margin: 0 auto;
-	min-width: 1440px;
+    margin: 0 auto;
+    min-width: 1440px;
 
-	// @include desc-small {
-	// 	width: 984px;
-	// }
+    // @include desc-small {
+    // 	width: 984px;
+    // }
 
-	@include tablet {
-		max-width: 1439px;
-		min-width: 768px;
-		width: 100%;
-	}
+    @include tablet {
+        max-width: 1439px;
+        min-width: 768px;
+        width: 100%;
+    }
 
-	@include mobile {
-		max-width: 768px;
-		min-width: 380px;
-	}
+    @include mobile {
+        max-width: 768px;
+        min-width: 380px;
+    }
 }
-

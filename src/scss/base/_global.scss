@@ -1,6 +1,6 @@
-@use 'vars' as*;
-@use 'mixins' as*;
-@use 'themes' as*;
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'themes' as *;
 
 // .section {
 //     width: 100%;
@@ -76,8 +76,6 @@
     }
 }
 
-
-
 h1.title {
     font-weight: 400;
     font-size: 80px;
@@ -132,11 +130,11 @@ h2 {
 
 h3 {
     font-family: $font-family;
+    color: var(--text-primary);
     font-weight: 600;
-    font-size: 80px;
-    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 125%;
     text-align: center;
-    color: $static-white;
 
     // @include tablet {
     //     font-size: 22px;
@@ -150,7 +148,7 @@ h3 {
 }
 
 .title {
-    color: var(--text-inverse);
+    color: var(--text-primary);
     font-family: $font-family;
     // text-transform: uppercase;
     width: max-content;
@@ -158,6 +156,8 @@ h3 {
 }
 
 .text-accent {
+    font-family: var(--font-family);
+    font-style: italic;
     color: var(--text-accent);
 }
 
@@ -186,8 +186,8 @@ legend {
     color: $dark;
 
     @include mobile {
-      font-size: 16px;
-      text-align: center;
+        font-size: 16px;
+        text-align: center;
     }
 }
 

@@ -22,11 +22,14 @@ npm i
 Зпустить в режиме разработки:
 ```
 gulp
+
+npx gulp
 ```
 
 Собрать версию для публикации:
 ```
 gulp docs
+npx gulp docs
 
 ```
 
@@ -35,3 +38,7 @@ gulp docs
 gulp fontsDev
 
 gulp fontsDocs
+
+Приттер:
+```
+npm run format

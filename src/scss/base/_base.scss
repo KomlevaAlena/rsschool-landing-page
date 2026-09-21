@@ -1,28 +1,28 @@
 // @import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
 // @use 'variables';
-@use 'vars' as*;
-@use 'themes' as*;
+@use 'vars' as *;
+@use 'themes' as *;
 
 html {
-	scroll-behavior: smooth;
-	background-color: var(--background-page);
+    scroll-behavior: smooth;
+    background-color: var(--background-page);
 }
 
 body {
-	background-color: var(--background-page);
-	// background-color: $static-white;
-	color: var(--text-primary);
-	font-family: $font-family;
-	text-wrap: balance;
-	margin: 0 auto;
+    background-color: var(--background-page);
+    // background-color: $static-white;
+    color: var(--text-primary);
+    font-family: $font-family;
+    text-wrap: balance;
+    margin: 0 auto;
 }
 
 img {
-	display: block;
+    display: block;
 }
 
 footer {
-	background-color: var(--background-page);
-	color: var(--text-primary);
-	margin: 0 auto;
+    background-color: var(--background-page);
+    color: var(--text-primary);
+    margin: 0 auto;
 }
